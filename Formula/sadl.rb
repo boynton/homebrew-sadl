@@ -21,8 +21,9 @@ class Sadl < Formula
       system "go", "build"
       bin.install ".gobuild/bin/sadl" => "sadl"
     end
-
-  test do
-    system "#{bin}/sadl", "-v"
+    
+    test do
+      system "#{bin}/sadl", "-v"
+    end
   end
 end
