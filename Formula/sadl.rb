@@ -8,7 +8,7 @@ class Sadl < Formula
   
   depends_on "go" => :build
   def install
-    on_macos do
+#    on_macos do
 #      if Hardware::CPU.arm?      
 #        url "https://github.com/boynton/sadl/releases/download/v1.6.0/sadl_darwin_arm64.zip"
 #        sha256 "2daae74b9431809446a203f3f786d32716a220adaa972f994de8b95c2ff50cdc"
