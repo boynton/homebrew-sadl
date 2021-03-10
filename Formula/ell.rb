@@ -5,25 +5,25 @@
 class Ell < Formula
   desc "ℒ (ell) is a LISP dialect, with semantics similar to Scheme, but adds Keywords, Structs, user-defined Types, and other features."
   homepage "https://github.com/boynton/ell"
-  version "1.0.2"
+  version "1.0.3"
   license "Apache-2.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/boynton/sadl/releases/download/v1.0.2/ell_1.0.2_macOS_x86_64.tar.gz"
-    sha256 "e54e04a8ccf291a5106afc8bbfc4a2e7fd207e8b7d3825e64743590bb1af37fc"
+    url "https://github.com/boynton/ell/releases/download/v1.0.3/ell_1.0.3_macOS_x86_64.tar.gz"
+    sha256 "c06d5cce3453d823b77d7ca0dc6e01a71aff568b46998306f41bae5c2733c50b"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/boynton/sadl/releases/download/v1.0.2/ell_1.0.2_macOS_arm64.tar.gz"
-    sha256 "49432b12b1e41dd8f9d71b533b09c455eeb8d5b4c7c3b1324ed294df38295db9"
+    url "https://github.com/boynton/ell/releases/download/v1.0.3/ell_1.0.3_macOS_arm64.tar.gz"
+    sha256 "330a0898fab9b85ba6826ec1940d3843fd8c12a954f3ebee65574edbb9ca4be9"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/boynton/sadl/releases/download/v1.0.2/ell_1.0.2_Linux_x86_64.tar.gz"
-    sha256 "bc1afbdc69c96a73d71607ca56c934d86682912a9fe2ea7d76ac1d45e127f2a2"
+    url "https://github.com/boynton/ell/releases/download/v1.0.3/ell_1.0.3_Linux_x86_64.tar.gz"
+    sha256 "d306401403bc1c3b2d9f0f665b6647635e3f0f877babc413ba51dfdad98c03b4"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/boynton/sadl/releases/download/v1.0.2/ell_1.0.2_Linux_arm64.tar.gz"
-    sha256 "9d79b34b2c3d2d72008d5c7052c6a1f8078f89b5cdeafcfb38b0ea95e92a7e66"
+    url "https://github.com/boynton/ell/releases/download/v1.0.3/ell_1.0.3_Linux_arm64.tar.gz"
+    sha256 "2520ae5bc52668f9620c8286fe61bcadc685b7c7c524b2ba21e8a99abb995f6c"
   end
 
   depends_on "go"
