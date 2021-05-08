@@ -5,25 +5,25 @@
 class Sadl < Formula
   desc "SADL is a general high level API description language for http-based services."
   homepage "https://github.com/boynton/sadl"
-  version "1.6.5"
+  version "1.6.6"
   license "Apache-2.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/boynton/sadl/releases/download/v1.6.5/sadl_1.6.5_macOS_x86_64.tar.gz"
-    sha256 "4fac267b8a3cc1c428b396dcfd3d8fcee92b7ae28f32e82d290ffca87bb078aa"
+    url "https://github.com/boynton/sadl/releases/download/v1.6.6/sadl_1.6.6_macOS_x86_64.tar.gz"
+    sha256 "831647275439f5f563ecfbf29974830531b84842898fc7213852cba0a9d46746"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/boynton/sadl/releases/download/v1.6.5/sadl_1.6.5_macOS_arm64.tar.gz"
-    sha256 "f933f290383f9d413d100572461efd744489d54ba06989556c581e6e22f7370a"
+    url "https://github.com/boynton/sadl/releases/download/v1.6.6/sadl_1.6.6_macOS_arm64.tar.gz"
+    sha256 "c77eaa3585dff88d728066007a2aa9498e0181df8a4d8d34cf5ead42ebeb0915"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/boynton/sadl/releases/download/v1.6.5/sadl_1.6.5_Linux_x86_64.tar.gz"
-    sha256 "9d6b716b58307d768673b03d4270b5528ce0f16801d0e555bc92a5a154974ba7"
+    url "https://github.com/boynton/sadl/releases/download/v1.6.6/sadl_1.6.6_Linux_x86_64.tar.gz"
+    sha256 "bc0ce2f3f54c5de7723d6f148d15d8af552409e6812d14e174eb20656352ad06"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/boynton/sadl/releases/download/v1.6.5/sadl_1.6.5_Linux_arm64.tar.gz"
-    sha256 "e87310efb14c3a1d5b72b5c9f6f9de0479cf4e741d2db6bd1112854f2db6d357"
+    url "https://github.com/boynton/sadl/releases/download/v1.6.6/sadl_1.6.6_Linux_arm64.tar.gz"
+    sha256 "adfe60cdcac8ccf3494cc78dacedfaa493c7c2c46f6cdc1ac269c37c884d696a"
   end
 
   depends_on "go"
