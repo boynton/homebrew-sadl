@@ -5,25 +5,25 @@
 class Smithy < Formula
   desc "A Go-based tool to work with Smithy API Specifications."
   homepage "https://github.com/boynton/smithy"
-  version "0.1.1"
+  version "0.1.2"
   license "Apache-2.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/boynton/smithy/releases/download/v0.1.1/smithy_0.1.1_macOS_x86_64.tar.gz"
-    sha256 "f87144ff3eb879699026c7404fe9f5e35d73251f0b04530f30f9fefb4e45a579"
+    url "https://github.com/boynton/smithy/releases/download/v0.1.2/smithy_0.1.2_macOS_x86_64.tar.gz"
+    sha256 "5348e16ce9429a04011c205f8c461f3cd3fa154d28cb62644e667611adee5b28"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/boynton/smithy/releases/download/v0.1.1/smithy_0.1.1_macOS_arm64.tar.gz"
-    sha256 "a45880fcf2a633de1975cb8c212d8a48973f0df7af617d5838412ee26acaa675"
+    url "https://github.com/boynton/smithy/releases/download/v0.1.2/smithy_0.1.2_macOS_arm64.tar.gz"
+    sha256 "f59c5f1a35e26af6fc59f4d0330dd7d0675466c8ef0caeb809ecc700269adfea"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/boynton/smithy/releases/download/v0.1.1/smithy_0.1.1_Linux_x86_64.tar.gz"
-    sha256 "fcf64d2ab27dade36030a53931a59d41907041e6836c79b5de94ea4f77e35292"
+    url "https://github.com/boynton/smithy/releases/download/v0.1.2/smithy_0.1.2_Linux_x86_64.tar.gz"
+    sha256 "496786ad0ed8357625cc146383290dbebcfef7a42ebeb36946934546bc911519"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/boynton/smithy/releases/download/v0.1.1/smithy_0.1.1_Linux_arm64.tar.gz"
-    sha256 "66819dee51de9cd897a3270fe524302fd9087673cc40918c14cf7312a6d0e0fd"
+    url "https://github.com/boynton/smithy/releases/download/v0.1.2/smithy_0.1.2_Linux_arm64.tar.gz"
+    sha256 "38e4a2940dff3976f9c0cfcbae07992f9cd9293cdc62df3f16d504ade918f795"
   end
 
   depends_on "go"
