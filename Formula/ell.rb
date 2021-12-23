@@ -1,3 +1,4 @@
+# coding: utf-8
 # typed: false
 # frozen_string_literal: true
 
@@ -7,7 +8,6 @@ class Ell < Formula
   homepage "https://github.com/boynton/ell"
   version "1.0.3"
   license "Apache-2.0"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/boynton/ell/releases/download/v1.0.3/ell_1.0.3_macOS_x86_64.tar.gz"

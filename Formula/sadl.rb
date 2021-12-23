@@ -7,7 +7,6 @@ class Sadl < Formula
   homepage "https://github.com/boynton/sadl"
   version "1.6.7"
   license "Apache-2.0"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/boynton/sadl/releases/download/v1.6.7/sadl_1.6.7_macOS_x86_64.tar.gz"

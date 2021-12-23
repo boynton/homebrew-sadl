@@ -7,7 +7,6 @@ class Smithy < Formula
   homepage "https://github.com/boynton/smithy"
   version "0.1.2"
   license "Apache-2.0"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/boynton/smithy/releases/download/v0.1.2/smithy_0.1.2_macOS_x86_64.tar.gz"
