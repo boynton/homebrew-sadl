@@ -5,31 +5,48 @@
 class Smithy < Formula
   desc "A Go-based tool to work with Smithy API Specifications."
   homepage "https://github.com/boynton/smithy"
-  version "0.1.2"
+  version "0.2.0"
   license "Apache-2.0"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/boynton/smithy/releases/download/v0.1.2/smithy_0.1.2_macOS_x86_64.tar.gz"
-    sha256 "5348e16ce9429a04011c205f8c461f3cd3fa154d28cb62644e667611adee5b28"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/boynton/smithy/releases/download/v0.2.0/smithy_0.2.0_macOS_arm64.tar.gz"
+      sha256 "a8d45c92576140deb11ff982069097c0b3cfed46ceba74fc8f295134bf9ebb3e"
+
+      def install
+        bin.install "smithy"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/boynton/smithy/releases/download/v0.2.0/smithy_0.2.0_macOS_x86_64.tar.gz"
+      sha256 "0d1633bca916482270ec2a0458297510f2be28b28ec71ca4ecab1707294bf536"
+
+      def install
+        bin.install "smithy"
+      end
+    end
   end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/boynton/smithy/releases/download/v0.1.2/smithy_0.1.2_macOS_arm64.tar.gz"
-    sha256 "f59c5f1a35e26af6fc59f4d0330dd7d0675466c8ef0caeb809ecc700269adfea"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/boynton/smithy/releases/download/v0.1.2/smithy_0.1.2_Linux_x86_64.tar.gz"
-    sha256 "496786ad0ed8357625cc146383290dbebcfef7a42ebeb36946934546bc911519"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/boynton/smithy/releases/download/v0.1.2/smithy_0.1.2_Linux_arm64.tar.gz"
-    sha256 "38e4a2940dff3976f9c0cfcbae07992f9cd9293cdc62df3f16d504ade918f795"
+
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/boynton/smithy/releases/download/v0.2.0/smithy_0.2.0_Linux_arm64.tar.gz"
+      sha256 "13adabd2c175b6e1abe1f9d3167ad2b494ff067b8e07fdf05d73e3edff14af87"
+
+      def install
+        bin.install "smithy"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/boynton/smithy/releases/download/v0.2.0/smithy_0.2.0_Linux_x86_64.tar.gz"
+      sha256 "4e8a000bada57709031016c9824c5fba17caa27af2abe630ab25b8dac775ec32"
+
+      def install
+        bin.install "smithy"
+      end
+    end
   end
 
   depends_on "go"
-
-  def install
-    bin.install "smithy"
-  end
 
   test do
     system "#{bin}/program -v"
