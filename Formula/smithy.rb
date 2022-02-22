@@ -5,21 +5,21 @@
 class Smithy < Formula
   desc "A Go-based tool to work with Smithy API Specifications."
   homepage "https://github.com/boynton/smithy"
-  version "0.2.1"
+  version "0.2.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/boynton/smithy/releases/download/v0.2.1/smithy_0.2.1_macOS_arm64.tar.gz"
-      sha256 "f5c6b3bc6874b716ee86fc2a0b40c41f58c1c1446eb5f979171c5344b70a659d"
+      url "https://github.com/boynton/smithy/releases/download/v0.2.2/smithy_0.2.2_macOS_arm64.tar.gz"
+      sha256 "f6c251014bd0347346eaa424e1e83860545cecd4721875f29bfe6f1b263ab290"
 
       def install
         bin.install "smithy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/boynton/smithy/releases/download/v0.2.1/smithy_0.2.1_macOS_x86_64.tar.gz"
-      sha256 "d03fa7832562677eead8c7fc6836696d12ef5b882fe12b752c6d92ab09b851d5"
+      url "https://github.com/boynton/smithy/releases/download/v0.2.2/smithy_0.2.2_macOS_x86_64.tar.gz"
+      sha256 "988176536fa91fc76e381ee82e6aee4fac442374573b3a6d72fc76daa6d1aef2"
 
       def install
         bin.install "smithy"
@@ -29,16 +29,16 @@ class Smithy < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boynton/smithy/releases/download/v0.2.1/smithy_0.2.1_Linux_arm64.tar.gz"
-      sha256 "29c51c075cec35d4e8e599f8222e290eef8b0c2de8897d1f8343a75d85dbea31"
+      url "https://github.com/boynton/smithy/releases/download/v0.2.2/smithy_0.2.2_Linux_arm64.tar.gz"
+      sha256 "02356ea171fb98a0136df01d8777150472fe2b3741384b15299f93c6fe00d9bf"
 
       def install
         bin.install "smithy"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/boynton/smithy/releases/download/v0.2.1/smithy_0.2.1_Linux_x86_64.tar.gz"
-      sha256 "2bec2a750c6614a909c28ac3429e67f75f7c15ce298a6de06fac43e486e5f644"
+      url "https://github.com/boynton/smithy/releases/download/v0.2.2/smithy_0.2.2_Linux_x86_64.tar.gz"
+      sha256 "f0a7eb001e1d2842eaef867701b4ed831c70b02137c5eb8195e836f04e91dee7"
 
       def install
         bin.install "smithy"
