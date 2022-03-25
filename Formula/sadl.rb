@@ -5,21 +5,21 @@
 class Sadl < Formula
   desc "SADL is a general high level API description language for http-based services."
   homepage "https://github.com/boynton/sadl"
-  version "1.7.6"
+  version "1.7.7"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/boynton/sadl/releases/download/v1.7.6/sadl_1.7.6_macOS_x86_64.tar.gz"
-      sha256 "47cada04d4ed04c3e07f830159a4093f605168b851f4d48da993fc808a0b151d"
+    if Hardware::CPU.arm?
+      url "https://github.com/boynton/sadl/releases/download/v1.7.7/sadl_1.7.7_macOS_arm64.tar.gz"
+      sha256 "41da37cd8b82632701deb60b9fce6659c25cb08787f3cf8432a73c0f725b5b42"
 
       def install
         bin.install "sadl"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/boynton/sadl/releases/download/v1.7.6/sadl_1.7.6_macOS_arm64.tar.gz"
-      sha256 "ad5c8fe291e84d738b46bdb20552db35f2c575ea86303b8d9b3d8144416584b3"
+    if Hardware::CPU.intel?
+      url "https://github.com/boynton/sadl/releases/download/v1.7.7/sadl_1.7.7_macOS_x86_64.tar.gz"
+      sha256 "679579c9287d415f703149a718015f01caf4e1a0d3e26fcb4fadba08ddaa9bc0"
 
       def install
         bin.install "sadl"
@@ -29,16 +29,16 @@ class Sadl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boynton/sadl/releases/download/v1.7.6/sadl_1.7.6_Linux_arm64.tar.gz"
-      sha256 "6944b28e297aa87eb4f9526275cf497d20e0a922b88c2c806d7814413086f744"
+      url "https://github.com/boynton/sadl/releases/download/v1.7.7/sadl_1.7.7_Linux_arm64.tar.gz"
+      sha256 "f6c0f7ef5056318dccefdb50fdd128416b4840474ce7ccf6cc4aba0b15eadda6"
 
       def install
         bin.install "sadl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/boynton/sadl/releases/download/v1.7.6/sadl_1.7.6_Linux_x86_64.tar.gz"
-      sha256 "4fa42316bb041ef493e7131eed2c411bb95b313ebe4358d8391a2bf17e5a49f7"
+      url "https://github.com/boynton/sadl/releases/download/v1.7.7/sadl_1.7.7_Linux_x86_64.tar.gz"
+      sha256 "f93185e0b02f5d61cada4f88cf36f3713d72adc03c2dc36d7cacb7da65258d73"
 
       def install
         bin.install "sadl"
