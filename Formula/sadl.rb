@@ -5,21 +5,21 @@
 class Sadl < Formula
   desc "SADL is a general high level API description language for http-based services."
   homepage "https://github.com/boynton/sadl"
-  version "1.8.3"
+  version "1.8.4"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/boynton/sadl/releases/download/v1.8.3/sadl_1.8.3_macOS_arm64.tar.gz"
-      sha256 "1a7e29b79c50b515376560f5c635e5d39d0ca56d45229efd502ef605be1fc05d"
+      url "https://github.com/boynton/sadl/releases/download/v1.8.4/sadl_1.8.4_macOS_arm64.tar.gz"
+      sha256 "59710577a84536e9251805c5c571025fbf85bb7eba03ae8c206a9abd9d428779"
 
       def install
         bin.install "sadl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/boynton/sadl/releases/download/v1.8.3/sadl_1.8.3_macOS_x86_64.tar.gz"
-      sha256 "fe3826fa982b4b8ffcf35df3056c87795a3774bbdd005a449fd15244ffde8211"
+      url "https://github.com/boynton/sadl/releases/download/v1.8.4/sadl_1.8.4_macOS_x86_64.tar.gz"
+      sha256 "1747e95247fa9d7d9fc90ec5169ea98e83a853f169528acda17993fc01d2d0ac"
 
       def install
         bin.install "sadl"
@@ -29,16 +29,16 @@ class Sadl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boynton/sadl/releases/download/v1.8.3/sadl_1.8.3_Linux_arm64.tar.gz"
-      sha256 "85482dfdedb85df5d717a4ca56b07b0ebd33cbf133d3e53e76cbc67d0e6b9253"
+      url "https://github.com/boynton/sadl/releases/download/v1.8.4/sadl_1.8.4_Linux_arm64.tar.gz"
+      sha256 "5194890d105567d12febf26e616511ccd062e21f28ca019e7bbb89c3da878fcd"
 
       def install
         bin.install "sadl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/boynton/sadl/releases/download/v1.8.3/sadl_1.8.3_Linux_x86_64.tar.gz"
-      sha256 "337459b19bd018d5406e176a90fe6c4cc412046181cfb4f764ceccd7091cd152"
+      url "https://github.com/boynton/sadl/releases/download/v1.8.4/sadl_1.8.4_Linux_x86_64.tar.gz"
+      sha256 "4f6ddedf22963a05c7d576ddcb659893730fe8d8555b21658e8dcd428a3f5bea"
 
       def install
         bin.install "sadl"
