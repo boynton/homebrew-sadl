@@ -5,21 +5,23 @@
 class Sadl < Formula
   desc "SADL is a general high level API description language for http-based services."
   homepage "https://github.com/boynton/sadl"
-  version "1.8.4"
+  version "1.8.5"
   license "Apache-2.0"
+
+  depends_on "go"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/boynton/sadl/releases/download/v1.8.4/sadl_1.8.4_macOS_arm64.tar.gz"
-      sha256 "59710577a84536e9251805c5c571025fbf85bb7eba03ae8c206a9abd9d428779"
+      url "https://github.com/boynton/sadl/releases/download/v1.8.5/sadl_1.8.5_macOS_arm64.tar.gz"
+      sha256 "79f7fbe84119850f2c1c97983db017a1a42d05c21d33eb19e1d8ec484bf106a4"
 
       def install
         bin.install "sadl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/boynton/sadl/releases/download/v1.8.4/sadl_1.8.4_macOS_x86_64.tar.gz"
-      sha256 "1747e95247fa9d7d9fc90ec5169ea98e83a853f169528acda17993fc01d2d0ac"
+      url "https://github.com/boynton/sadl/releases/download/v1.8.5/sadl_1.8.5_macOS_x86_64.tar.gz"
+      sha256 "a1fd1deefa8bd9705a30f3ba07fccdfb22273496f712f6da280a9ec237a7d938"
 
       def install
         bin.install "sadl"
@@ -29,24 +31,22 @@ class Sadl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boynton/sadl/releases/download/v1.8.4/sadl_1.8.4_Linux_arm64.tar.gz"
-      sha256 "5194890d105567d12febf26e616511ccd062e21f28ca019e7bbb89c3da878fcd"
+      url "https://github.com/boynton/sadl/releases/download/v1.8.5/sadl_1.8.5_Linux_arm64.tar.gz"
+      sha256 "86d34d1c0bc0ca902608c4db4e14ba90bb398c61cbfa8a38e54c808b3f5735e7"
 
       def install
         bin.install "sadl"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/boynton/sadl/releases/download/v1.8.4/sadl_1.8.4_Linux_x86_64.tar.gz"
-      sha256 "4f6ddedf22963a05c7d576ddcb659893730fe8d8555b21658e8dcd428a3f5bea"
+      url "https://github.com/boynton/sadl/releases/download/v1.8.5/sadl_1.8.5_Linux_x86_64.tar.gz"
+      sha256 "7afd84fea0c1a24916dc34f5636ac5115b3b6a1ba50f026b0cc26b0cea14f1e9"
 
       def install
         bin.install "sadl"
       end
     end
   end
-
-  depends_on "go"
 
   test do
     system "#{bin}/program -v"
