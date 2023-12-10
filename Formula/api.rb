@@ -5,23 +5,23 @@
 class Api < Formula
   desc "A command line tool to work with API Specifications and code generation."
   homepage "https://github.com/boynton/api"
-  version "0.0.71"
+  version "0.0.8"
   license "Apache-2.0"
 
   depends_on "go"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/boynton/api/releases/download/v0.0.71/api_darwin_arm64.tar.gz"
-      sha256 "04c6249b3cf9b1d81e878a174fcf6ac75bbc671f1c0238bf472c59ad67015529"
+      url "https://github.com/boynton/api/releases/download/v0.0.8/api_darwin_arm64.tar.gz"
+      sha256 "9547f3b4129496e87a06b7924d7ddc192e23b5439310aa1a9363462f7a44fb07"
 
       def install
         bin.install "api"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/boynton/api/releases/download/v0.0.71/api_darwin_amd64.tar.gz"
-      sha256 "ca90fd28c0990ac29cd4fb4176e0a05268d821a1f3db672475952aff1cc95edc"
+      url "https://github.com/boynton/api/releases/download/v0.0.8/api_darwin_amd64.tar.gz"
+      sha256 "46ef1956d81d3b00a22ec4a11ccc51a356e283d95309957e185070f84d58c08b"
 
       def install
         bin.install "api"
@@ -31,16 +31,16 @@ class Api < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boynton/api/releases/download/v0.0.71/api_linux_arm64.tar.gz"
-      sha256 "ce59f13265bb78fde02ac52c143f568d1d77fe6510ae2e9fd4d1c09a47e7498a"
+      url "https://github.com/boynton/api/releases/download/v0.0.8/api_linux_arm64.tar.gz"
+      sha256 "cf7120f6a0b992867630edf5e7213c99e3b8a6f314dd94e0187b048b0f5b11d0"
 
       def install
         bin.install "api"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/boynton/api/releases/download/v0.0.71/api_linux_amd64.tar.gz"
-      sha256 "2d8d2f5e58242425033668cad953735dd8553be00c1ad30c4883d1b1c69929ef"
+      url "https://github.com/boynton/api/releases/download/v0.0.8/api_linux_amd64.tar.gz"
+      sha256 "1eaf58fe139b86fbd2fcec39f822cf8d685ebd569df229f5782364fb122fa8d0"
 
       def install
         bin.install "api"
