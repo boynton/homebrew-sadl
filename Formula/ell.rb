@@ -5,23 +5,23 @@
 class Ell < Formula
   desc "ℒ (ell) is a LISP dialect."
   homepage "https://github.com/boynton/ell"
-  version "1.0.4"
+  version "1.0.5"
   license "Apache-2.0"
 
   depends_on "go"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/boynton/ell/releases/download/v1.0.4/ell_1.0.4_macOS_arm64.tar.gz"
-      sha256 "2d9932e3ed7436e15b7a9b498d13ae07f2d6eca562858871595738edd163feca"
+      url "https://github.com/boynton/ell/releases/download/v1.0.5/ell_darwin_arm64.tar.gz"
+      sha256 "6b9ee132a74d340f10189657140b7a4d7df6ef81b22d0214a150c04a04b02a90"
 
       def install
         bin.install "ell"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/boynton/ell/releases/download/v1.0.4/ell_1.0.4_macOS_x86_64.tar.gz"
-      sha256 "33fd6d3ec64ef985eebaf7867d180c12fe791cfca5eafcbd886ce1e201127c51"
+      url "https://github.com/boynton/ell/releases/download/v1.0.5/ell_darwin_amd64.tar.gz"
+      sha256 "514caad2b17574dde6587037aaab969ae0664215e8d7dd0eb63f40f0ab65e552"
 
       def install
         bin.install "ell"
@@ -31,16 +31,16 @@ class Ell < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boynton/ell/releases/download/v1.0.4/ell_1.0.4_Linux_arm64.tar.gz"
-      sha256 "dec59e0383c41d20a41b1adf4d2832728f24b667ba1733689a208314066bf36d"
+      url "https://github.com/boynton/ell/releases/download/v1.0.5/ell_linux_arm64.tar.gz"
+      sha256 "ff113c10fb2e0721fcb9803d6af69edef7be51578dcce5c59f13edb0d915a12d"
 
       def install
         bin.install "ell"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/boynton/ell/releases/download/v1.0.4/ell_1.0.4_Linux_x86_64.tar.gz"
-      sha256 "ce2df589ef08dfba0d81279fc55b9a32c506a43a2b8ab32e755e4800af9b3735"
+      url "https://github.com/boynton/ell/releases/download/v1.0.5/ell_linux_amd64.tar.gz"
+      sha256 "2eecd6fc36cc15ec252334d4275154269e2b6524b810b64ad124d5d49e71c917"
 
       def install
         bin.install "ell"
