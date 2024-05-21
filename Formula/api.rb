@@ -5,23 +5,23 @@
 class Api < Formula
   desc "A command line tool to work with API Specifications and code generation."
   homepage "https://github.com/boynton/api"
-  version "0.3.4"
+  version "0.3.5"
   license "Apache-2.0"
 
   depends_on "go"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/boynton/api/releases/download/v0.3.4/api_darwin_arm64.tar.gz"
-      sha256 "5cdc265961cf9f9a58b2bb7a4b55fbf0e3dcba345755f37043b60b89207aec04"
+    if Hardware::CPU.intel?
+      url "https://github.com/boynton/api/releases/download/v0.3.5/api_darwin_amd64.tar.gz"
+      sha256 "a3832cad58b2465439989c1953de8d505a5be0271f19b9d91ff81d0e9a6a7c21"
 
       def install
         bin.install "api"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/boynton/api/releases/download/v0.3.4/api_darwin_amd64.tar.gz"
-      sha256 "32df4ece842e01e7a51ed3b342e085eb186e2217d4f07b48317bb3bc2e740132"
+    if Hardware::CPU.arm?
+      url "https://github.com/boynton/api/releases/download/v0.3.5/api_darwin_arm64.tar.gz"
+      sha256 "b7dff929e6461f594ecbe1d250f309ae4888841565474b561ba7437aa8e34df4"
 
       def install
         bin.install "api"
@@ -30,17 +30,17 @@ class Api < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boynton/api/releases/download/v0.3.4/api_linux_arm64.tar.gz"
-      sha256 "44e3dc2a2a5e0d0652b5efb5dc836081d45b475c6e7ec85567f8f7004feec171"
+    if Hardware::CPU.intel?
+      url "https://github.com/boynton/api/releases/download/v0.3.5/api_linux_amd64.tar.gz"
+      sha256 "99c082c90b84b8203650923932c5065db43fa82463d1f157c762026326e5bf18"
 
       def install
         bin.install "api"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/boynton/api/releases/download/v0.3.4/api_linux_amd64.tar.gz"
-      sha256 "1d2c9160aac501e86147ea21f579bbf114f69c528d38086f7b96ecf0fdec308b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/boynton/api/releases/download/v0.3.5/api_linux_arm64.tar.gz"
+      sha256 "2afc80d4ed0c414f065a18668301d60de003905278fc53fc9bba0ebd543de4f3"
 
       def install
         bin.install "api"
