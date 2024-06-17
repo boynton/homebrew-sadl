@@ -5,23 +5,23 @@
 class Api < Formula
   desc "A command line tool to work with API Specifications and code generation."
   homepage "https://github.com/boynton/api"
-  version "0.3.5"
+  version "0.3.6"
   license "Apache-2.0"
 
   depends_on "go"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/boynton/api/releases/download/v0.3.5/api_darwin_amd64.tar.gz"
-      sha256 "a3832cad58b2465439989c1953de8d505a5be0271f19b9d91ff81d0e9a6a7c21"
+    on_intel do
+      url "https://github.com/boynton/api/releases/download/v0.3.6/api_darwin_amd64.tar.gz"
+      sha256 "9a71febe3c1cf055fc6c540454800e65c034d7ef8a37988db89e053053e1e708"
 
       def install
         bin.install "api"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/boynton/api/releases/download/v0.3.5/api_darwin_arm64.tar.gz"
-      sha256 "b7dff929e6461f594ecbe1d250f309ae4888841565474b561ba7437aa8e34df4"
+    on_arm do
+      url "https://github.com/boynton/api/releases/download/v0.3.6/api_darwin_arm64.tar.gz"
+      sha256 "cbc265d335849d37bbbd9631122709fa8f83839e94d27a04bbe0492579b4eb74"
 
       def install
         bin.install "api"
@@ -30,20 +30,24 @@ class Api < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/boynton/api/releases/download/v0.3.5/api_linux_amd64.tar.gz"
-      sha256 "99c082c90b84b8203650923932c5065db43fa82463d1f157c762026326e5bf18"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/boynton/api/releases/download/v0.3.6/api_linux_amd64.tar.gz"
+        sha256 "b4ea080f1d538ab92f6841ec9b21fd1e5d4d26714c2906b5a780b36faec8e4f5"
 
-      def install
-        bin.install "api"
+        def install
+          bin.install "api"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boynton/api/releases/download/v0.3.5/api_linux_arm64.tar.gz"
-      sha256 "2afc80d4ed0c414f065a18668301d60de003905278fc53fc9bba0ebd543de4f3"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/boynton/api/releases/download/v0.3.6/api_linux_arm64.tar.gz"
+        sha256 "0d867d846c407abb7f574af2bf814c16f4333b3ab7c03d26ffc5d9a5f9be92cc"
 
-      def install
-        bin.install "api"
+        def install
+          bin.install "api"
+        end
       end
     end
   end
