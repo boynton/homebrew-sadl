@@ -5,23 +5,23 @@
 class Sadl < Formula
   desc "SADL is a general high level API description language for http-based services."
   homepage "https://github.com/boynton/sadl"
-  version "1.8.5"
+  version "1.8.7"
   license "Apache-2.0"
 
   depends_on "go"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/boynton/sadl/releases/download/v1.8.5/sadl_1.8.5_macOS_arm64.tar.gz"
-      sha256 "79f7fbe84119850f2c1c97983db017a1a42d05c21d33eb19e1d8ec484bf106a4"
+    on_intel do
+      url "https://github.com/boynton/sadl/releases/download/v1.8.7/sadl_darwin_amd64.tar.gz"
+      sha256 "a8fc12db2d59fd33ae41eabc28c7231e1a675776febefb32efdbb63c67689ead"
 
       def install
         bin.install "sadl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/boynton/sadl/releases/download/v1.8.5/sadl_1.8.5_macOS_x86_64.tar.gz"
-      sha256 "a1fd1deefa8bd9705a30f3ba07fccdfb22273496f712f6da280a9ec237a7d938"
+    on_arm do
+      url "https://github.com/boynton/sadl/releases/download/v1.8.7/sadl_darwin_arm64.tar.gz"
+      sha256 "a71a89c1116257cb56ae0cd926092a89d05174e523c8fcb7beb712ec0d0552bc"
 
       def install
         bin.install "sadl"
@@ -30,20 +30,24 @@ class Sadl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/boynton/sadl/releases/download/v1.8.5/sadl_1.8.5_Linux_arm64.tar.gz"
-      sha256 "86d34d1c0bc0ca902608c4db4e14ba90bb398c61cbfa8a38e54c808b3f5735e7"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/boynton/sadl/releases/download/v1.8.7/sadl_linux_amd64.tar.gz"
+        sha256 "019c1f3d57c3c8469d99d83901f7fb9503ebe583353480f2fe3f85fc9ec9f112"
 
-      def install
-        bin.install "sadl"
+        def install
+          bin.install "sadl"
+        end
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/boynton/sadl/releases/download/v1.8.5/sadl_1.8.5_Linux_x86_64.tar.gz"
-      sha256 "7afd84fea0c1a24916dc34f5636ac5115b3b6a1ba50f026b0cc26b0cea14f1e9"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/boynton/sadl/releases/download/v1.8.7/sadl_linux_arm64.tar.gz"
+        sha256 "401915a0e50c90c38f01c0cbe6b146ae11becd4dce5dc3ffbb0ae24d0025f2ba"
 
-      def install
-        bin.install "sadl"
+        def install
+          bin.install "sadl"
+        end
       end
     end
   end
